@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cars</title>
+    <style>
+        .content {
+            margin: 50px 200px;
+            font-family: Arial,sans-serif;
+            border: solid 2px;
+            background-color: beige;
+        }
+        .first-column {
+            width: 30px;
+            height: 35px;
+            padding-left: 15px;
+        }
+        .second-column {
+            width: 250px;
+            height: 35px;
+            padding-left: 5px;
+        }
+        .third-column {
+            width: 50px;
+            height: 35px;
+            padding-left: 5px;
+        }
+    </style>
+</head>
+<body>
+    <table class="content">
+        <caption>
+            <p th:text="CARS"></p>
+        </caption>
+        <tr th:each="car : ${cars}">
+            <td th:text="${car.getId()}" class="first-column"></td>
+            <td th:text="${car.getMark()}" class="second-column"></td>
+            <td th:text="${car.getYear()}" class="third-column"></td>
+        </tr>
+    </table>
+</body>
+</html>
