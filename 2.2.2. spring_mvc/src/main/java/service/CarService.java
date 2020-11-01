@@ -1,9 +1,10 @@
-package serviceDAO;
+package service;
 
 import model.Car;
 
 import java.util.List;
 
-public interface CarServiceDAO {
+public interface CarService {
+
     List<Car> showCars(int a);
 }
